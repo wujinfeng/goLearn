@@ -1,9 +1,8 @@
 package main
 
 import (
-"fmt"
-"time"
-) 
+	"fmt"
+)
 
 func main() {
 	ch := make(chan string)
@@ -12,17 +11,15 @@ func main() {
 		go printHelloWorld(i, ch)
 	}
 
-	for{
+	for {
 		msg := <-ch
 		fmt.Println(msg)
 	}
-
 	// time.Sleep(time.Millisecond)
 }
 
-
 func printHelloWorld(i int, ch chan string) {
-	for{
+	for {
 		ch <- fmt.Sprintf("hello world %d \n", i)
 	}
 }

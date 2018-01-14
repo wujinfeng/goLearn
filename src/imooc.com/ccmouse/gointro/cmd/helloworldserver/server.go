@@ -1,12 +1,12 @@
 package main
 
 import (
-"fmt"
-"net/http"
-) 
+	"fmt"
+	"net/http"
+)
 
 func main() {
-	http.HandleFunc('/', func (writer http.ResponseWriter, request *http.Request) {
+	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		fmt.Fprintf(writer, "<h1>hello world %s</h1>", request.FormValue("name"))
 	})
 

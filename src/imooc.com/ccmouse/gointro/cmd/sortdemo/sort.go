@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 	// create a slice of int
 	a := []int{3, 6, 7, 6, 1, 10, 8}
 
-	sort.ints(a)
+	sort.Ints(a)
 
-	for _, v := 0 range a {
+	for _, v := range a {
 		fmt.Println(v)
 	}
 
