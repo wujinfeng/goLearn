@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"fmt"
+	"math"
+)
 
 // Shape 接口
 type Shape interface {
@@ -37,4 +40,23 @@ func (c *Circle) Area() float64 {
 // Area 三角形面积
 func (t *Triangle) Area() float64 {
 	return t.Base * t.Height * 0.5
+}
+
+func main() {
+	elements := make(map[string]string)
+	elements["H"] = "Hydrogen"
+	elements["He"] = "Helium"
+	elements["Li"] = "Lithium"
+	elements["Be"] = "Beryllium"
+	elements["B"] = "Boron"
+	elements["N"] = "Nitrogen"
+	elements["O"] = "Oxygen"
+	elements["F"] = "Fluorine"
+	elements["Ne"] = "Neon"
+	name, ok := elements["C"]
+	if(ok){
+		
+	}
+	fmt.Println("a:", name)
+	fmt.Println(ok)
 }
